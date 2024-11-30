@@ -1,0 +1,17 @@
+# --- from rest_framework.decorators import action
+    action: This is a decorator from DRF that allows you 
+    to add custom actions to a ViewSet. 
+    These actions will be exposed as additional endpoints on the view set.
+
+    -- query = request.GET.get('query', ''): This retrieves 
+        the query parameter from the URL's query string.
+        For example, if the client makes a GET request like 
+        /recipes/search/?query=pasta, the query variable will be set to "pasta".
+        If no query parameter is provided, it defaults to an empty string ('').
+    
+    --  @action(detail=False, methods=['get'])
+        def search(self, request):
+
+        'search' is the name of the method you defined.
+        'detail=False' tells DRF that this action applies to the entire collection (i.e., all recipes).
+        'methods=['get']' means it will respond to GET requests.

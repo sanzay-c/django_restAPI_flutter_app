@@ -1,0 +1,11 @@
+# --- Loading builder
+
+The loadingBuilder takes three parameters:
+
+1. BuildContext context: The build context, just like in the builder function of many Flutter widgets.
+2. Widget child: The actual image widget that will be displayed once the image has finished loading.
+    This child is passed to the loadingBuilder, 
+    but you decide when to display it based on the loading progress.
+3. ImageChunkEvent? loadingProgress: This contains the loading progress details 
+    such as the number of bytes already loaded and the total number of bytes for the image. 
+    It is null when the image is fully loaded.
